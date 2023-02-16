@@ -1,28 +1,27 @@
-#include <iostream>
 //Author: Tony Liu
 //Course: CSCI-135
 //Instructor: Genady Maryash
 //Assignment: Lab4 C
 
 //Enter size, returns a cross with the requested size
+#include <iostream>
 #include <string>
 using namespace std;
-int main(){
-    int size;
-    cin >> size;
+std::string cross(int size){
+    std::string ret = "";
     if(size == 1){
-        cout << "*";
+        ret += "*";
         return 0;
     }
     for(int x = 0;x < size;x++){
         for(int y = 0;y<size;y++){
             if(x==y || y ==(size-1-x)){
-                cout << "*";
+                ret += "*";
             }else{
-                cout << " ";
+                ret += " ";
             }
         }
-        cout << endl;
+        ret += "\n";
     }
-    return 0;
+    return ret;
 }
