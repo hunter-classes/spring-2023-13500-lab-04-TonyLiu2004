@@ -6,27 +6,25 @@
 //Enter width and height, returns an upsidedown trapezoid with the requested 
 //width and length
 #include <iostream>
-using namespace std;
-int main(){
-    int width;
-    int height;
-    cin >> width >> height;
+#include "trapezoid.h"
+
+std::string trapezoid(int width, int height){
+    std::string ret;
     if(((height-1)*2) > (width-1)){
-        cout << "Impossible shape!";
-        return 0;
+        return "Impossible shape!";
     }
 
     int front = 0;
     for(int i=0;i<height;i++){
         for(int l = 0;l<front;l++){
-            cout << " ";
+            ret+= " ";
         }
         for(int j =0;j<width;j++){
-            cout << "*";  
+            ret+= "*";  
         }
-        cout << endl;
+        ret+="\n";
         front +=1;
         width -=2;
     }
-    return 0;
+    return ret;
 }
