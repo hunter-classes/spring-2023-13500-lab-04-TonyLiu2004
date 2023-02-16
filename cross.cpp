@@ -6,7 +6,6 @@
 //Enter size, returns a cross with the requested size
 #include <iostream>
 #include <string>
-using namespace std;
 std::string cross(int size){
     std::string ret = "";
     if(size == 1){
