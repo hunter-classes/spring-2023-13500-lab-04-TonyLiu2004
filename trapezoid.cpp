@@ -11,7 +11,7 @@
 std::string trapezoid(int width, int height){
     std::string ret;
     if(((height-1)*2) > (width-1)){
-        return "Impossible shape!";
+        return "Impossible shape!\n";
     }
 
     int front = 0;

@@ -12,6 +12,6 @@ int main(){
     std::cout << cross(5);
     std::cout << lower(5);
     std::cout << upper(5);
-    std::cout << trapezoid(5,10);
+    std::cout << trapezoid(10,5);
     return 0;
 }
