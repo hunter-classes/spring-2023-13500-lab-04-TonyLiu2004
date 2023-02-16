@@ -10,7 +10,7 @@ std::string cross(int size){
     std::string ret = "";
     if(size == 1){
         ret += "*";
-        return 0;
+        return "";
     }
     for(int x = 0;x < size;x++){
         for(int y = 0;y<size;y++){
