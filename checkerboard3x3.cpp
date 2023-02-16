@@ -5,16 +5,13 @@
 
 //Enter width and height, returns a 3x3 checkerboard with the requested size
 #include <iostream>
-using namespace std;
-int main(){
-    int width;
-    int height;
-    cin >> width >> height;
-
+#include "checkerboard3x3.h"
+std::string checkerboard3x3(int width, int height){
+    std::string ret = "";
     bool alt = false;
     for(int i=1;i<height+1;i++){
         if(alt){ //for alternate rows
-            cout << "   ";
+            ret+= "   ";
         }
         //prints the squares
         bool pSpace = false;
@@ -25,9 +22,9 @@ int main(){
                 pSpace = true;
             }
             if(pSpace){
-                cout << " ";
+                ret+= " ";
             }else{
-                cout << "*";  
+                ret+= "*";  
             }
         }
 
@@ -39,7 +36,7 @@ int main(){
             alt = true;
             width -=3;
         }
-        cout << endl;
+        ret+= "\n";
     }
-    return 0;
+    return ret;
 }
